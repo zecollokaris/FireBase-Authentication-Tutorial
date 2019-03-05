@@ -40,6 +40,8 @@ While filling the project details, use the same package name which you gave in f
 
 2. Open **AndroidManifest.xml** and add the **INTERNET** permission as we need to **make network calls.**
 
+#### `AndroidManifest.xml`
+
 ```
 <uses-permission android:name="android.permission.INTERNET" />
 ```
@@ -47,6 +49,8 @@ While filling the project details, use the same package name which you gave in f
 3. Confirm that you had added the **google-services.json** file to your project’s **app** folder. This step is very important as your project won’t build without this file.
 
 4. Now open the **build.gradle** located in project’s home directory and add firebase dependency.
+
+#### `build.gradle`
 
 ```
     dependencies {
@@ -61,6 +65,8 @@ While filling the project details, use the same package name which you gave in f
 
 5. Open **app/build.gradle** and add firebase auth dependency. At the very bottom of the file, add **apply plugin: ‘com.google.gms.google-services’**
 
+#### `app/build.gradle`
+
 ```
 dependencies {
     implementation 'com.google.firebase:firebase-auth:9.0.2'
@@ -68,3 +74,85 @@ dependencies {
  
 apply plugin: 'com.google.gms.google-services'
 ```
+
+6. Add the below resources to dimens.xml, colors.xml and strings.xml. These resources doesn’t require for firebase, but for this article.
+
+#### `dimex.xml`
+
+```xml
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="logo_w_h">100dp</dimen>
+</resources>
+```
+
+#### `colors.xml`
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00bcd4</color>
+    <color name="colorPrimaryDark">#0097a7</color>
+    <color name="colorAccent">#f2fe71</color>
+ 
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="bg_main">#428bca</color>
+    <color name="white">#ffffff</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+</resources>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Developed by
+========================
