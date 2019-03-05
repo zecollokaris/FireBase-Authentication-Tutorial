@@ -26,7 +26,24 @@
 
 ######IMAGE OF DOWNLOADING GOOGLE FILE!########
 
-5. Switch to the Project view in Android Studio to see your project root directory. Move the **google-services.json** file you just downloaded into your Android app module root directory.
+5. Switch to the Project view in Android Studio to see your project root directory. Move the **google-services.json** file you just downloaded into your Android app module `app/src/main` root directory.
 
 ######IMAGE OF ADDING THE JSON FILE!########
 
+## CREATING ANDROID PROJECT
+
+**As we work here you can compare some section of your code with my repository incase you get stuck!**
+
+1. Create a new project in Android Studio from **File ⇒ New Project.** When it prompts you to select the default activity, select **Blank Activity** and proceed.
+
+While filling the project details, use the same package name which you gave in firebase console. In my case I am using same **com.zecolloauth.zecolloauth**.
+
+2. Open **AndroidManifest.xml** and add the **INTERNET** permission as we need to **make network calls.**
+
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+3. Confirm that you had added the **google-services.json** file to your project’s **app** folder. This step is very important as your project won’t build without this file.
+
+4. 

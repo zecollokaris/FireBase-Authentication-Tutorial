@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "781044059177",
+    "firebase_url": "https://zecolloauthentication.firebaseio.com",
+    "project_id": "zecolloauthentication",
+    "storage_bucket": "zecolloauthentication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781044059177:android:fb2e8f13f4e28f2f",
+        "android_client_info": {
+          "package_name": "com.zecolloauth.zecolloauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781044059177-jgfe09l7nophj7bbtslt7ttl8uq3lbkd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwYhsLCoYtQ0C4OjaYUCIZKhTtri8rwrk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
