@@ -154,7 +154,33 @@ apply plugin: 'com.google.gms.google-services'
 
 ## SIGNUP WITH EMAIL & PASSWORD.
 
-7. Create an activity named **SignupActivity.java** and add the following code to the layout file **activity_signup.xml**
+
+7. Create an activity named **ResetPasswordActivity.java** and add the following code to the layout file **activity_reset_password.xml**
+
+#### `activity_reset_password.xml`
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Everything Works Okay!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+```
+
+8. Create an activity named **SignupActivity.java** and add the following code to the layout file **activity_signup.xml**
 
 #### `activity_signup.xml`
 
@@ -265,7 +291,7 @@ apply plugin: 'com.google.gms.google-services'
 </android.support.design.widget.CoordinatorLayout>
 ```
 
-8. Open **SignupActivity.java** and add the following. Firebase provides **createUserWithEmailAndPassword()** method to create a new user with email and password data.
+9. Open **SignupActivity.java** and add the following. Firebase provides **createUserWithEmailAndPassword()** method to create a new user with email and password data.
 
 
 #### `SignupActivity.java`
