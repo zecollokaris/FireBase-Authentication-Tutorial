@@ -46,4 +46,15 @@ While filling the project details, use the same package name which you gave in f
 
 3. Confirm that you had added the **google-services.json** file to your project’s **app** folder. This step is very important as your project won’t build without this file.
 
-4. 
+4. Now open the build.gradle located in project’s home directory and add firebase dependency.
+
+```
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.1'
+        classpath 'com.google.gms:google-services:4.2.0'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+```
