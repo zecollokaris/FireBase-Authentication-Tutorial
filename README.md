@@ -46,7 +46,7 @@ While filling the project details, use the same package name which you gave in f
 
 3. Confirm that you had added the **google-services.json** file to your project’s **app** folder. This step is very important as your project won’t build without this file.
 
-4. Now open the build.gradle located in project’s home directory and add firebase dependency.
+4. Now open the **build.gradle** located in project’s home directory and add firebase dependency.
 
 ```
     dependencies {
@@ -57,4 +57,14 @@ While filling the project details, use the same package name which you gave in f
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+```
+
+5. Open **app/build.gradle** and add firebase auth dependency. At the very bottom of the file, add **apply plugin: ‘com.google.gms.google-services’**
+
+```
+dependencies {
+    implementation 'com.google.firebase:firebase-auth:9.0.2'
+}
+ 
+apply plugin: 'com.google.gms.google-services'
 ```
