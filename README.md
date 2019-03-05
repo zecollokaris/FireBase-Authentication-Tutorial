@@ -898,8 +898,73 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
 
 
+## BELOW ARE OTHER QUICK CODE SNIPPETS
 
+### Checking User Session
 
+```java
+auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+            // User is logged in
+        }
+```
+
+### Change Email
+
+```java
+FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+ 
+user.updateEmail(newEmail.getText().toString().trim())
+            .addOnCompleteListener(new OnCompleteListener<Void>() {
+        @Override
+        public void onComplete(@NonNull Task<Void> task) {
+            if (task.isSuccessful()) {
+                Toast.makeText(MainActivity.this, "Email address is updated.", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(MainActivity.this, "Failed to update email!", Toast.LENGTH_LONG).show();
+            }
+        }
+    });
+```
+
+### Deleting Account / User
+
+```java
+FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+if (user != null) {
+        user.delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this, "Your profile is deleted:( Create a account now!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(MainActivity.this, "Failed to delete your account!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+```
+
+### Sign Out!
+
+```java
+auth.signOut();
+ 
+// this listener will be called when there is change in firebase user session
+FirebaseAuth.AuthStateListener authListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user == null) {
+                    // user auth state is changed - user is null
+                    // launch login activity
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    finish();
+                }
+            }
+        };
+```
 
 
 
