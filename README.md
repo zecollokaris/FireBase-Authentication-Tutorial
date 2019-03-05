@@ -75,7 +75,7 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'
 ```
 
-6. Add the below resources to **dimens.xml, colors.xml and strings.xml**. These resources doesn’t require for firebase, but for this demo.
+6. Add the below resources to **dimens.xml, colors.xml, strings.xml and string.xml **. These resources doesn’t require for firebase, but for this demo.
 
 #### `dimex.xml`
 
@@ -148,6 +148,23 @@ apply plugin: 'com.google.gms.google-services'
     <string name="lbl_forgot_password">Forgot password?</string>
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
 </resources>
+```
+
+#### `styles.xml`
+
+```xml
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>
+
 ```
 
 #### **Now we have the project ready with all the dependencies added. Let’s start by adding the sign up screen.**
@@ -407,11 +424,35 @@ public class SignupActivity extends AppCompatActivity {
 }
 ```
 
-9. Open AndroidManifest.xml and make SignupActivity as **launcher activity (temporarily)** and test the sign up.
+10. Before we run the application confirm your dependencies in `app/build.gradle` are as follows.
 
+```
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.firebase:firebase-auth:9.0.2'
+}
 
+apply plugin: 'com.google.gms.google-services'
 
+```
 
+12. Open AndroidManifest.xml and make SignupActivity as **launcher activity (temporarily)** and test the sign up.
+
+######### Signup Screen Display! ##############
+
+#### **If you login to Firebase console, you can see the user created with the email id you have given the android app.**
+
+######### Firebase Colsole Of Registered User! ##############
+
+## LOGIN WITH EMAIL & PASSWORD!
+
+#### **Now we’ll add the login screen and check the credentials we have created on sign up screen.**
 
 
 
