@@ -33,8 +33,8 @@ public class LoginActivity extends AppCompatActivity {
 
         if (auth.getCurrentUser() != null) {
 //            LOGS USER IN ONCE IT FINDS HE HAD LOGGED IN!
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            finish();
+//            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//            finish();
         }
 
         // set the view now
