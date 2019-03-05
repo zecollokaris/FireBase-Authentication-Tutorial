@@ -167,7 +167,7 @@ apply plugin: 'com.google.gms.google-services'
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="info.androidhive.firebase.LoginActivity">
+    tools:context=".SignupActivity">
  
     <LinearLayout
         android:layout_width="fill_parent"
@@ -266,6 +266,7 @@ apply plugin: 'com.google.gms.google-services'
 ```
 
 8. Open **SignupActivity.java** and add the following. Firebase provides **createUserWithEmailAndPassword()** method to create a new user with email and password data.
+
 
 #### `SignupActivity.java`
 
@@ -379,6 +380,9 @@ public class SignupActivity extends AppCompatActivity {
     }
 }
 ```
+
+9. Open AndroidManifest.xml and make SignupActivity as **launcher activity (temporarily)** and test the sign up.
+
 
 
 
