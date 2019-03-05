@@ -195,3 +195,10 @@ apply plugin: 'com.google.gms.google-services'
 
 Developed by
 ========================
+
+
+
+Check  on color xml
+stringxml
+dimex xml
+app theme color
