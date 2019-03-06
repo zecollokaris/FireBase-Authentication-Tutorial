@@ -898,6 +898,38 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## BELOW ARE OTHER QUICK CODE SNIPPETS
 
 ### Checking User Session
@@ -973,6 +1005,12 @@ FirebaseAuth.AuthStateListener authListener = new FirebaseAuth.AuthStateListener
 
 Developed by
 ========================
+
+- Mobile number: (+254) 798731203
+
+- Email Address: collo.kariss@gmail.com
+
+- github-username: [zecollokaris](https://github.com/zecollokaris)
 
 
 
