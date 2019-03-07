@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:theme="@style/CustomToolbarStyle">
+    app:theme="@style/CustomToolbarStyle"
+    app:popupTheme="@style/CustomPopupStyle">
 
 </android.support.v7.widget.Toolbar>

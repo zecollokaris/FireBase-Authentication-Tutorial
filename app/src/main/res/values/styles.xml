@@ -5,10 +5,12 @@
 
     </style>
 
+    <!--Toolbar theme-->
     <style name="CustomToolbarStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@color/white</item>
     </style>
 
+    <!--Menu Item Theme-->
     <style name="CustomPopupStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@color/white</item>
         <item name="overlapAnchor">false</item>

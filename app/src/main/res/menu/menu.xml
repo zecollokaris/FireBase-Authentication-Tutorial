@@ -4,7 +4,6 @@
 <item
     android:id="@+id/action_setting"
     android:title="@string/settings_name"
-    app:showAsAction= "never"
-    app:popupTheme="@style/CustomPopupStyle">
+    app:showAsAction= "never">
 </item>
 </menu>

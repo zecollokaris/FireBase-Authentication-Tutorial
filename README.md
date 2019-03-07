@@ -38,12 +38,21 @@
 
 While filling the project details, use the same package name which you gave in firebase console. In my case I am using same **com.zecolloauth.zecolloauth**.
 
-2. Open **AndroidManifest.xml** and add the **INTERNET** permission as we need to **make network calls.**
+2. Open **AndroidManifest.xml** and add the **INTERNET** permission as we need to **make network calls** and change the theme to **NoActionBar**
 
 #### `AndroidManifest.xml`
 
-```
+```xml
 <uses-permission android:name="android.permission.INTERNET" />
+```
+#### Now change the theme to **@style/Theme.AppCompat.Light.NoActionBar**
+
+#### `AndroidManifest.xml`
+
+```xml
+    <application
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
 ```
 
 3. Confirm that you had added the **google-services.json** file to your project’s **app** folder. This step is very important as your project won’t build without this file.
@@ -156,7 +165,7 @@ apply plugin: 'com.google.gms.google-services'
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -874,6 +883,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 ######### EMAIL used to reset Password Display! ##############
 
 
+## ADD TOOLBAR WITH ACCOUNT SETTINGS
 
 
 
