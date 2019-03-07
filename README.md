@@ -1,44 +1,84 @@
 # <p align="center">FIREBASE AUTHENTICATION<p>
 
+
+
+
 ## ENABLING FIREBASE AUTH
+
+
 
 1. First thing you need to do is go to `https://firebase.google.com/` and make an account to gain access to their console. After you gain access to the console you can start by creating your first project.
 
+
+
 ######IMAGE OF CREATED PROJECT!########
+
+
 
 - **Give your project a name of your choice.**
 
+
+
 ######IMAGE OF CREATING PROJECT!########
+
+
 
 2. Next go to your project dashboard. Find the Auth and click get started. Go to set up sign in method and choose Email & Password and enable it.
 
+
+
 ######CROPED IMAGE OF ADDING EMAIL OUTH!########
+
+
 
 3. We need to now add Firebase to our android app so go to the project overview section and choose android.
 
+
+
 ######IMAGE OF CHOOSING ANDROID!########
+
+
 
 3. Give the package name of your project (mine is com.zecolloauth.zecolloauth) in which you are going to integrate the Firebase. 
 
+
+
 ######IMAGE OF ADDING PACKAGE NAME!########
+
+
 
 4. Here the google-services.json file will be downloaded when you press add app button.
 
+
+
 ######IMAGE OF DOWNLOADING GOOGLE FILE!########
+
+
 
 5. Switch to the Project view in Android Studio to see your project root directory. Move the **google-services.json** file you just downloaded into your Android app module `app/src/main` root directory.
 
+
+
 ######IMAGE OF ADDING THE JSON FILE!########
+
+
+
+
 
 ## CREATING ANDROID PROJECT
 
+
 **As we work here you can compare some section of your code with my repository incase you get stuck!**
+
+
 
 1. Create a new project in Android Studio from **File ⇒ New Project.** When it prompts you to select the default activity, select **Blank Activity** and proceed.
 
 While filling the project details, use the same package name which you gave in firebase console. In my case I am using same **com.zecolloauth.zecolloauth**.
 
+
 2. Open **AndroidManifest.xml** and add the **INTERNET** permission as we need to **make network calls** and change the theme to **NoActionBar**
+
 
 #### `AndroidManifest.xml`
 
@@ -49,15 +89,19 @@ While filling the project details, use the same package name which you gave in f
 
 #### `AndroidManifest.xml`
 
+
 ```xml
     <application
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
 ```
 
+
 3. Confirm that you had added the **google-services.json** file to your project’s **app** folder. This step is very important as your project won’t build without this file.
 
+
 4. Now open the **build.gradle** located in project’s home directory and add firebase dependency.
+
 
 #### `build.gradle`
 
@@ -72,7 +116,9 @@ While filling the project details, use the same package name which you gave in f
     }
 ```
 
+
 5. Open **app/build.gradle** and add firebase auth dependency. At the very bottom of the file, add **apply plugin: ‘com.google.gms.google-services’**
+
 
 #### `app/build.gradle`
 
@@ -84,7 +130,9 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'
 ```
 
+
 6. Add the below resources to **dimens.xml, colors.xml, strings.xml and string.xml **. These resources doesn’t require for firebase, but for this demo.
+
 
 #### `dimex.xml`
 
@@ -178,12 +226,18 @@ apply plugin: 'com.google.gms.google-services'
 
 #### **Now we have the project ready with all the dependencies added. Let’s start by adding the sign up screen.**
 
+
+
+
+
 ## SIGNUP WITH EMAIL & PASSWORD.
 
 
 1. Create an activity named **ResetPasswordActivity.java** and add the following code to the layout file **activity_reset_password.xml**
 
+
 #### `activity_reset_password.xml`
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -206,9 +260,12 @@ apply plugin: 'com.google.gms.google-services'
 </android.support.constraint.ConstraintLayout>
 ```
 
+
 2. Create an activity named **SignupActivity.java** and add the following code to the layout file **activity_signup.xml**
 
+
 #### `activity_signup.xml`
+
 
 ```xml
 
@@ -317,10 +374,12 @@ apply plugin: 'com.google.gms.google-services'
 </android.support.design.widget.CoordinatorLayout>
 ```
 
+
 3. Open **SignupActivity.java** and add the following. Firebase provides **createUserWithEmailAndPassword()** method to create a new user with email and password data.
 
 
 #### `SignupActivity.java`
+
 
 ```java
 package com.zecolloauth.zecolloauth;
@@ -432,7 +491,9 @@ public class SignupActivity extends AppCompatActivity {
 }
 ```
 
+
 4. Before we run the application confirm your **dependencies** in `app/build.gradle` are as follows.
+
 
 ```
 dependencies {
@@ -447,24 +508,37 @@ dependencies {
 }
 
 apply plugin: 'com.google.gms.google-services'
-
 ```
+
 
 5. Open AndroidManifest.xml and make SignupActivity as **launcher activity (temporarily)** and test the sign up.
 
+
 ######### Signup Screen Display! ##############
+
+
 
 #### **If you login to Firebase console, you can see the user created with the email id you have given the android app.**
 
+
+
 ######### Firebase Colsole Of Registered User! ##############
+
+
+
+
 
 ## LOGIN WITH EMAIL & PASSWORD!
 
+
 #### **Now we’ll add the login screen and check the credentials we have created on sign up screen.**
+
 
 1. Create another activity named **LoginActivity.java** and add the below code to its layout file **activity_login.xml.**
 
+
 #### `activity_login.xml`
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -567,9 +641,12 @@ apply plugin: 'com.google.gms.google-services'
 </android.support.design.widget.CoordinatorLayout>
 ```
 
+
 2. Open **LoginActivity.java** and do the below changes. Firebase provides **signInWithEmailAndPassword()** method to sign in the user.
 
+
 #### `LoginActivity.java`
+
 
 ```java
 package com.zecolloauth.zecolloauth;
@@ -687,20 +764,32 @@ public class LoginActivity extends AppCompatActivity {
 }
 ```
 
+
 3. Open **AndroidManifest.xml** and make the **LoginActivity.java** as launcher activity to make the login screen as first screen.
+
 
 - Run the project and login with the credentials which you used while signing up.
 
 
+
 ######### LOGIN Screen Display! ##############
+
+
+
+
+
 
 ## RESET PASSWORD!
 
+
 We shall try **sending reset password email** when required. This is a very difficult task if you want to have your own **email server**.
+
 
 1. We had already created an activity named **ResetPasswordActivity.java** previously. Add the code below to its layout file and class.
 
+
 #### `activity_reset_password.xml`
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -797,9 +886,12 @@ We shall try **sending reset password email** when required. This is a very diff
 </android.support.design.widget.CoordinatorLayout>
 ```
 
+
 2. Open **ResetPasswordActivity.java** add the below code. You can use **sendPasswordResetEmail()** method to send the password reset email.
 
+
 #### `ResetPasswordActivity.java`
+
 
 ```java
 package com.zecolloauth.zecolloauth;
@@ -876,22 +968,37 @@ public class ResetPasswordActivity extends AppCompatActivity {
 }
 ```
 
+
 ######### Forgot Password Screen Display! ##############
 
+
+
 #### **Here is the password reset email user will receive.**
+
+
 
 ######### EMAIL used to reset Password Display! ##############
 
 
+
+
+
 ## ADD TOOLBAR WITH ACCOUNT SETTINGS
+
 
 1. Create a new layout file named **app_bar** and change it root element to **android.support.v7.widget.Toolbar**
 
+
+
 ######### IMAGE of Layout Created with Root Element ##############
+
+
 
 2. Add **custom theme** to a tool bar we shall create. 
 
+
 #### `app_bar.xml`
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -904,9 +1011,12 @@ public class ResetPasswordActivity extends AppCompatActivity {
 </android.support.v7.widget.Toolbar>
 ```
 
+
 1. Create another activity named **AccountActivity.java** and add the below code to its layout file **activity_account.xml.**
 
+
 #### `activity_account.xml`
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -929,10 +1039,12 @@ public class ResetPasswordActivity extends AppCompatActivity {
 </android.support.constraint.ConstraintLayout>
 ```
 
+
 3. In the **MainActivity class** we shall create a toolbar and menu to change to a new activity.
 
 
 #### `MainActivity.java`
+
 
 ```java
 package com.zecolloauth.zecolloauth;
@@ -983,10 +1095,12 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+
 4. Create another new layout file named **menu.xml** which will hold the menu widget with the account setting option.
 
 
 #### `menu.xml`
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1000,15 +1114,22 @@ public class MainActivity extends AppCompatActivity {
 </menu>
 ```
 
+
 - Run the project and you will get a menu icon which contains an **Accounts Setting option**.
 
 - Once you click on the option it will launch the **AccountsActivity**
 
 
+
 ######### ICON THAT ONCE CLICKED DIRECTS YOU TO ANOTHER ACTIVITY! ##############
 
 
+
+
+
+
 ## ACCOUNT SETTING - PUT ALL TOGETHER
+
 
 1. Now we’ll keep all the above functionalities in main activity and make fully functional app. Open the layout file of Account activity **activity_account.xml** and add the below layout code.
 
@@ -1188,10 +1309,11 @@ public class MainActivity extends AppCompatActivity {
 
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
-
 ```
 
+
 2. Open the **AccountActivity.java** and the following code. Basically here we combine all the functionalities into a single activity.
+
 
 #### `AccountActivity.java`
 
@@ -1413,48 +1535,7 @@ public class AccountActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+########## PICTURE OF ACCOUNTS ACTIVITY LAYOUT. sign out etc! ##############
 
 
 
@@ -1462,6 +1543,7 @@ public class AccountActivity extends AppCompatActivity {
 
 
 ## BELOW ARE OTHER QUICK CODE SNIPPETS
+
 
 ### Checking User Session
 
@@ -1471,6 +1553,7 @@ auth = FirebaseAuth.getInstance();
             // User is logged in
         }
 ```
+
 
 ### Change Email
 
@@ -1490,6 +1573,7 @@ user.updateEmail(newEmail.getText().toString().trim())
     });
 ```
 
+
 ### Deleting Account / User
 
 ```java
@@ -1508,6 +1592,7 @@ if (user != null) {
                 });
     }
 ```
+
 
 ### Sign Out!
 
@@ -1530,7 +1615,7 @@ FirebaseAuth.AuthStateListener authListener = new FirebaseAuth.AuthStateListener
 ```
 
 
-
+#### :clap: Congratulation you have now Ingegrated Login and Register with Firebase.
 
 
 
@@ -1551,5 +1636,7 @@ dimex xml
 app theme color
 layout 
 activities
+manifesst.
 add repo link for follow
 add link to images for download.
+github link and blog link
