@@ -2,7 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-
+        <item name="android:background">@color/white</item>
     </style>
 
     <!--Toolbar theme-->
