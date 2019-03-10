@@ -12,7 +12,7 @@
 
 
 <p align="center">
-<img align="centre" src="Spec.md/Disp1.png" alt="Kenyanese" />
+<img align="centre" src="Spec.md/Disp1.png" alt="Firebase Features" />
 <p>
 
 
@@ -48,7 +48,9 @@ Below are the **advantages** using Firebase in general:
 
 
 
-######IMAGE OF CREATED PROJECT!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp2.png" alt="Create a project" />
+<p>
 
 
 
@@ -56,7 +58,9 @@ Below are the **advantages** using Firebase in general:
 
 
 
-######IMAGE OF CREATING PROJECT!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp3.png" alt="Name the project" />
+<p>
 
 
 
@@ -64,15 +68,19 @@ Below are the **advantages** using Firebase in general:
 
 
 
-######CROPED IMAGE OF ADDING EMAIL OUTH!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp4.png" alt="Set up email auth" />
+<p>
 
 
 
-3. We need to now add Firebase to our android app so go to the project overview section and choose android.
+3. We need to now **add Firebase to our android app** so go to the project overview section and choose android.
 
 
 
-######IMAGE OF CHOOSING ANDROID!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp5.png" alt="add firebase to app" />
+<p>
 
 
 
@@ -80,15 +88,19 @@ Below are the **advantages** using Firebase in general:
 
 
 
-######IMAGE OF ADDING PACKAGE NAME!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp6.png" alt="add package name" />
+<p>
 
 
 
-4. Here the google-services.json file will be downloaded when you press add app button.
+4. Here the google-services.json file will be downloaded.
 
 
 
-######IMAGE OF DOWNLOADING GOOGLE FILE!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp7.png" alt="Download google gson" />
+<p>
 
 
 
@@ -96,7 +108,9 @@ Below are the **advantages** using Firebase in general:
 
 
 
-######IMAGE OF ADDING THE JSON FILE!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp8.png" alt="Where to place gson file" />
+<p>
 
 
 
@@ -289,6 +303,12 @@ apply plugin: 'com.google.gms.google-services'
 
 </shape>
 ```
+
+<p align="center">
+<img align="centre" src="Spec.md/Disp18.png" alt="creating roundbutton.xml" />
+<p>
+
+
 
 #### **Now we have the project ready with all the dependencies added. Let’s start by adding the sign up screen.**
 
@@ -589,7 +609,9 @@ apply plugin: 'com.google.gms.google-services'
 5. Open AndroidManifest.xml and make SignupActivity as **launcher activity (temporarily)** and test the sign up.
 
 
-######### Signup Screen Display! ##############
+<p align="center">
+<img align="centre" width="250" src="Spec.md/Disp9.png" alt="Register Screen" />
+<p>
 
 
 
@@ -597,7 +619,9 @@ apply plugin: 'com.google.gms.google-services'
 
 
 
-######### Firebase Colsole Of Registered User! ##############
+<p align="center">
+<img align="centre" src="Spec.md/Disp10.png" alt="Firebase console once registered" />
+<p>
 
 
 
@@ -861,8 +885,9 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-######### LOGIN Screen Display! ##############
-
+<p align="center">
+<img align="centre" width="250" src="Spec.md/Disp11.png" alt="Login Screen" />
+<p>
 
 
 
@@ -1065,7 +1090,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
 ```
 
 
-######### Forgot Password Screen Display! ##############
+<p align="center">
+<img align="centre" width="250" src="Spec.md/Disp12.png" alt="Reset Password Screen" />
+<p>
 
 
 
@@ -1073,7 +1100,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
 
 
-######### EMAIL used to reset Password Display! ##############
+<p align="center">
+<img align="centre" src="Spec.md/Disp13.png" alt="Email used to reset password" />
+<p>
 
 
 
@@ -1086,7 +1115,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
 
 
-######### IMAGE of Layout Created with Root Element ##############
+<p align="center">
+<img align="centre" src="Spec.md/Disp14.png" alt="Creating app_bar.xml" />
+<p>
 
 
 
@@ -1245,7 +1276,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-######### ICON THAT ONCE CLICKED DIRECTS YOU TO ANOTHER ACTIVITY! ##############
+<p align="center">
+<img align="left" width="250" src="Spec.md/Disp15.png" alt="Popup Menu" />
+<img align="right" width="250" src="Spec.md/Disp16.png" alt="Popup Menu Pressed" />
+<p>
 
 
 
@@ -1659,7 +1693,10 @@ public class AccountActivity extends AppCompatActivity {
 
 
 
-########## PICTURE OF ACCOUNTS ACTIVITY LAYOUT. sign out etc! ##############
+
+<p align="center">
+<img align="centre" width="250" src="Spec.md/Disp16.png" alt="Accounts Screen. sign out etc!" />
+<p>
 
 
 
