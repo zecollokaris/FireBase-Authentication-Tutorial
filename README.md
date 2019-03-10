@@ -162,7 +162,7 @@ apply plugin: 'com.google.gms.google-services'
 6. Add the below resources to **dimens.xml, colors.xml, strings.xml and string.xml **. These resources doesn’t require for firebase, but for this demo.
 
 
-#### `dimex.xml`
+#### `dimens.xml`
 
 ```xml
 <resources>
@@ -182,20 +182,19 @@ apply plugin: 'com.google.gms.google-services'
     <color name="colorPrimary">#00bcd4</color>
     <color name="colorPrimaryDark">#0097a7</color>
     <color name="colorAccent">#f2fe71</color>
- 
-    <color name="bg_login">#26ae90</color>
-    <color name="bg_register">#2e3237</color>
-    <color name="bg_main">#428bca</color>
+
     <color name="white">#ffffff</color>
-    <color name="input_login">#222222</color>
-    <color name="input_login_hint">#999999</color>
-    <color name="input_register">#888888</color>
-    <color name="input_register_bg">#3b4148</color>
-    <color name="input_register_hint">#5e6266</color>
-    <color name="btn_login">#26ae90</color>
-    <color name="btn_login_bg">#eceef1</color>
-    <color name="lbl_name">#333333</color>
-    <color name="btn_logut_bg">#ff6861</color>
+    <color name="colorRed">#EB3349</color>
+    <color name="colorPink">#FF4081</color>
+    <color name="colorTransparentPink">#FF9EA1</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparentWhite">#cccccc</color>
+    <color name="colorStandardBlack">#262626</color>
+    <color name="colorDarkBlue">#001621</color>
+    <color name="colorCyanBlue">#0B9BE2</color>
+    <color name="colorMidBlue">#032B3F</color>
+    <color name="colorCoinBackground">#01242b</color>
 </resources>
 ```
 
@@ -204,7 +203,7 @@ apply plugin: 'com.google.gms.google-services'
 ```xml
 <resources>
     <string name="app_name">Firebase Auth</string>
-    <string name="action_sign_in_short">Register</string>
+    <string name="action_sign_in_short">REGISTER</string>
     <string name="email">Email</string>
     <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
     <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
@@ -223,7 +222,7 @@ apply plugin: 'com.google.gms.google-services'
     <string name="btn_link_to_login">Already registered. Login Me!</string>
     <string name="title_activity_reset_password">ResetPasswordActivity</string>
     <string name="btn_forgot_password">Forgot your password?</string>
-    <string name="btn_reset_password">Reset Password</string>
+    <string name="btn_reset_password">RESET PASSWORD</string>
     <string name="btn_back"><![CDATA[<< Back]]></string>
     <string name="hint_new_email">New Email</string>
     <string name="btn_change">Change</string>
@@ -232,6 +231,7 @@ apply plugin: 'com.google.gms.google-services'
     <string name="btn_sign_out">Sign Out</string>
     <string name="lbl_forgot_password">Forgot password?</string>
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+    <string name="settings_name">Account Settings</string>
 </resources>
 ```
 
@@ -242,14 +242,28 @@ apply plugin: 'com.google.gms.google-services'
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!--Toolbar theme-->
+    <style name="CustomToolbarStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!--Menu Item Theme-->
+    <style name="CustomPopupStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/white</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">-4dp</item>
+    </style>
+
+    <!--Input Theme-->
+    <style name="CustomInputStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/colorStandardBlack</item>
+        <item name="android:theme">@color/colorDarkBlue</item>
     </style>
 
 </resources>
-
 ```
 
 7. Create a new layout file in the **drawable folder** `app/src/main/res/drawable/` named **roundbutton.xml** 
@@ -319,94 +333,103 @@ apply plugin: 'com.google.gms.google-services'
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".SignupActivity">
- 
+    tools:context=".LoginActivity">
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorWhite"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin">
- 
- 
+
+
         <ImageView
             android:layout_width="@dimen/logo_w_h"
             android:layout_height="@dimen/logo_w_h"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:src="@mipmap/ic_launcher" />
- 
+            android:src="@drawable/knight"/>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
- 
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:textColorHint="@color/colorPink">
+
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/email"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/hint_email"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="10dp"
+                app:fontFamily="@font/poiretoneregular"
                 android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textColor="@android:color/white" />
- 
+                android:textColor="@color/colorTransparentPink"
+                android:theme="@style/CustomInputStyle"/>
         </android.support.design.widget.TextInputLayout>
- 
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
- 
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:textColorHint="@color/colorPink">
+
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusableInTouchMode="true"
+                android:layout_marginBottom="10dp"
+                android:drawableLeft="@drawable/key"
+                android:drawablePadding="12dp"
+                android:ems="20"
                 android:hint="@string/hint_password"
-                android:imeActionId="@+id/login"
-                android:imeOptions="actionUnspecified"
+                app:fontFamily="@font/poiretoneregular"
                 android:inputType="textPassword"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textColor="@android:color/white" />
- 
+                android:textColor="@color/colorTransparentPink"
+                android:theme="@style/CustomInputStyle"/>
         </android.support.design.widget.TextInputLayout>
- 
+
+        <!-- Login Button -->
+
         <Button
-            android:id="@+id/sign_up_button"
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
+            android:id="@+id/btn_login"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@color/colorAccent"
-            android:text="@string/action_sign_in_short"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
- 
+            android:layout_marginTop="30dp"
+            app:fontFamily="@font/josefinslabbold"
+            android:background="@drawable/roundbutton"
+            android:text="@string/btn_login"
+            android:textColor="@color/colorTransparentWhite" />
+
         <Button
             android:id="@+id/btn_reset_password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="10dp"
             android:background="@null"
             android:text="@string/btn_forgot_password"
             android:textAllCaps="false"
-            android:textColor="@color/colorAccent" />
- 
+            app:fontFamily="@font/josefinslabitalic"
+            android:textColor="@color/colorPink" />
+
         <!-- Link to Login Screen -->
- 
+
         <Button
-            android:id="@+id/sign_in_button"
+            android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="10dp"
             android:background="@null"
-            android:text="@string/btn_link_to_login"
+            android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="15dp" />
+            android:textColor="@color/colorPink"
+            app:fontFamily="@font/josefinslabbold"
+            android:textSize="15dp"/>
     </LinearLayout>
- 
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="30dp"
@@ -592,88 +615,102 @@ apply plugin: 'com.google.gms.google-services'
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".LoginActivity">
- 
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorWhite"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin">
- 
- 
+
+
         <ImageView
             android:layout_width="@dimen/logo_w_h"
             android:layout_height="@dimen/logo_w_h"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:src="@mipmap/ic_launcher" />
- 
+            android:src="@drawable/knight"/>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
- 
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:textColorHint="@color/colorPink">
+
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:hint="@string/hint_email"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="10dp"
+                app:fontFamily="@font/poiretoneregular"
                 android:inputType="textEmailAddress"
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white" />
+                android:textColor="@color/colorTransparentPink"
+                android:theme="@style/CustomInputStyle"/>
         </android.support.design.widget.TextInputLayout>
- 
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
- 
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:textColorHint="@color/colorPink">
+
             <EditText
                 android:id="@+id/password"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:drawableLeft="@drawable/key"
+                android:drawablePadding="12dp"
+                android:ems="20"
                 android:hint="@string/hint_password"
+                app:fontFamily="@font/poiretoneregular"
                 android:inputType="textPassword"
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white" />
+                android:textColor="@color/colorTransparentPink"
+                android:theme="@style/CustomInputStyle"/>
         </android.support.design.widget.TextInputLayout>
- 
+
         <!-- Login Button -->
- 
+
         <Button
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:background="@color/colorAccent"
+            android:layout_marginTop="30dp"
+            app:fontFamily="@font/josefinslabbold"
+            android:background="@drawable/roundbutton"
             android:text="@string/btn_login"
-            android:textColor="@android:color/black" />
- 
+            android:textColor="@color/colorTransparentWhite" />
+
         <Button
             android:id="@+id/btn_reset_password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="10dp"
             android:background="@null"
             android:text="@string/btn_forgot_password"
             android:textAllCaps="false"
-            android:textColor="@color/colorAccent" />
- 
+            app:fontFamily="@font/josefinslabitalic"
+            android:textColor="@color/colorPink" />
+
         <!-- Link to Login Screen -->
- 
+
         <Button
             android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="10dp"
             android:background="@null"
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="15dp" />
+            android:textColor="@color/colorPink"
+            app:fontFamily="@font/josefinslabbold"
+            android:textSize="15dp"/>
     </LinearLayout>
- 
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="30dp"
@@ -842,10 +879,10 @@ We shall try **sending reset password email** when required. This is a very diff
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorTransparentWhite"
     android:fitsSystemWindows="true"
-    tools:context="info.androidhive.firebase.LoginActivity">
- 
+    tools:context=".ResetPasswordActivity">
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -853,24 +890,25 @@ We shall try **sending reset password email** when required. This is a very diff
         android:gravity="center"
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin">
- 
- 
+
+
         <ImageView
             android:layout_width="@dimen/logo_w_h"
             android:layout_height="@dimen/logo_w_h"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
-            android:src="@mipmap/ic_launcher" />
- 
+            android:src="@drawable/knight" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="10dp"
             android:text="@string/lbl_forgot_password"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorPink"
+            app:fontFamily="@font/josefinslabbold"
             android:textSize="20dp" />
- 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -878,36 +916,41 @@ We shall try **sending reset password email** when required. This is a very diff
             android:gravity="center_horizontal"
             android:padding="@dimen/activity_horizontal_margin"
             android:text="@string/forgot_password_msg"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorPink"
+            app:fontFamily="@font/josefinslabitalic"
             android:textSize="14dp" />
- 
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
- 
+
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="20dp"
                 android:hint="@string/hint_email"
+                app:fontFamily="@font/poiretoneregular"
                 android:inputType="textEmailAddress"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorTransparentPink"
                 android:textColorHint="@android:color/white" />
         </android.support.design.widget.TextInputLayout>
- 
+
         <!-- Login Button -->
- 
+
         <Button
             android:id="@+id/btn_reset_password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:background="@color/colorAccent"
+            android:layout_marginTop="30dp"
+            app:fontFamily="@font/josefinslabbold"
+            android:background="@drawable/roundbutton"
             android:text="@string/btn_reset_password"
-            android:textColor="@android:color/black" />
- 
+            android:textColor="@color/colorTransparentWhite"  />
+
         <Button
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
@@ -915,10 +958,11 @@ We shall try **sending reset password email** when required. This is a very diff
             android:layout_marginTop="10dp"
             android:background="@null"
             android:text="@string/btn_back"
-            android:textColor="@color/colorAccent" />
- 
+            android:textColor="@color/colorPink"
+            app:fontFamily="@font/josefinslabbold" />
+
     </LinearLayout>
- 
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="30dp"
@@ -1086,6 +1130,34 @@ public class ResetPasswordActivity extends AppCompatActivity {
 3. In the **MainActivity class** we shall create a toolbar and menu to change to a new activity.
 
 
+#### `activity_main`
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/app_bar">
+    </include>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+```
+
 #### `MainActivity.java`
 
 
@@ -1199,7 +1271,7 @@ public class MainActivity extends AppCompatActivity {
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary" />
+            android:background="@color/colorPink" />
 
     </android.support.design.widget.AppBarLayout>
 
