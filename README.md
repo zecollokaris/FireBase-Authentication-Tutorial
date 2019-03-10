@@ -1,33 +1,42 @@
-# <p align="center">FIREBASE AUTHENTICATION<p>
+# <p align="center"> :fire: :closed_lock_with_key: FIREBASE AUTHENTICATION<p>
 
 
 <p align="center">
-<img align="left" width="250" src="Spec.md/Disp4.png" alt="Login page" />
-<img align="centre" width="250" src="Spec.md/Disp5.png" alt="Register Page" />
-<img align="right" width="250" src="Spec.md/Disp13.png" alt="Authenticating login" />
+<img align="left" width="250" src="https://user-images.githubusercontent.com/36197725/54093330-cb3eca00-43a7-11e9-92a2-d82c9f5a85ee.gif" alt="Registration page" />
+<img align="centre" width="250" src="https://user-images.githubusercontent.com/36197725/54093261-1e644d00-43a7-11e9-9994-ec761a4486e1.gif" alt="Login Page" />
+<img align="right" width="250" src="https://user-images.githubusercontent.com/36197725/54093238-dfce9280-43a6-11e9-8d2a-633f02e223c9.gif" alt="Forgot Password login" />
 <p>
+
+
+## FEATURES OF FIREBASE.
+
+
+<p align="center">
+<img align="centre" src="Spec.md/Disp1.png" alt="Firebase Features" />
+<p>
+
 
 Firebase comes with bunch features essential for every android app starting from **authentication** to hosting the app.
 
 
--Below are the **advantages** using Firebase in general:
+Below are the **advantages** using Firebase in general:
 
 
-> Super easy and quick to implement.
+- Super easy and quick to implement.
 
-> No server side configuration needed. No PHP Scripts and No Database Designs.
+- No server side configuration needed. No PHP Scripts and No Database Designs.
 
-> Realtime update without using GCM.
+- Realtime update without using GCM.
 
-> Autoscaling built-in
+- Autoscaling built-in
 
-> Can start for free (only need to start paying once we hit 50 connections)
+- Can start for free (only need to start paying once we hit 50 connections)
 
-> Robust APIs for Javascript (including several frameworks like Angular), iOS, and Android
+- Robust APIs for Javascript (including several frameworks like Angular), iOS, and Android
 
-> Built-in support for authentication services like Facebook, Google, and Twitter
+- Built-in support for authentication services like Facebook, Google, and Twitter
 
-> Declarative Security Rules model allows us to enforce read/write privileges and data validation throughout the tree
+- Declarative Security Rules model allows us to enforce read/write privileges and data validation throughout the tree
 
 
 
@@ -39,7 +48,9 @@ Firebase comes with bunch features essential for every android app starting from
 
 
 
-######IMAGE OF CREATED PROJECT!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp2.png" alt="Create a project" />
+<p>
 
 
 
@@ -47,7 +58,9 @@ Firebase comes with bunch features essential for every android app starting from
 
 
 
-######IMAGE OF CREATING PROJECT!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp3.png" alt="Name the project" />
+<p>
 
 
 
@@ -55,15 +68,19 @@ Firebase comes with bunch features essential for every android app starting from
 
 
 
-######CROPED IMAGE OF ADDING EMAIL OUTH!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp4.png" alt="Set up email auth" />
+<p>
 
 
 
-3. We need to now add Firebase to our android app so go to the project overview section and choose android.
+3. We need to now **add Firebase to our android app** so go to the project overview section and choose android.
 
 
 
-######IMAGE OF CHOOSING ANDROID!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp5.png" alt="add firebase to app" />
+<p>
 
 
 
@@ -71,15 +88,19 @@ Firebase comes with bunch features essential for every android app starting from
 
 
 
-######IMAGE OF ADDING PACKAGE NAME!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp6.png" alt="add package name" />
+<p>
 
 
 
-4. Here the google-services.json file will be downloaded when you press add app button.
+4. Here the google-services.json file will be downloaded.
 
 
 
-######IMAGE OF DOWNLOADING GOOGLE FILE!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp7.png" alt="Download google gson" />
+<p>
 
 
 
@@ -87,7 +108,9 @@ Firebase comes with bunch features essential for every android app starting from
 
 
 
-######IMAGE OF ADDING THE JSON FILE!########
+<p align="center">
+<img align="centre" src="Spec.md/Disp8.png" alt="Where to place gson file" />
+<p>
 
 
 
@@ -96,7 +119,7 @@ Firebase comes with bunch features essential for every android app starting from
 ## CREATING ANDROID PROJECT
 
 
-**As we work here you can compare some section of your code with my repository incase you get stuck!**
+#### **As we work here you can compare some section of your code with my [Repository](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo) incase you get stuck!** [https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo)
 
 
 
@@ -280,6 +303,12 @@ apply plugin: 'com.google.gms.google-services'
 
 </shape>
 ```
+
+<p align="center">
+<img align="centre" src="Spec.md/Disp18.png" alt="creating roundbutton.xml" />
+<p>
+
+
 
 #### **Now we have the project ready with all the dependencies added. Let’s start by adding the sign up screen.**
 
@@ -580,7 +609,9 @@ apply plugin: 'com.google.gms.google-services'
 5. Open AndroidManifest.xml and make SignupActivity as **launcher activity (temporarily)** and test the sign up.
 
 
-######### Signup Screen Display! ##############
+<p align="center">
+<img align="centre" width="250" src="Spec.md/Disp9.png" alt="Register Screen" />
+<p>
 
 
 
@@ -588,7 +619,9 @@ apply plugin: 'com.google.gms.google-services'
 
 
 
-######### Firebase Colsole Of Registered User! ##############
+<p align="center">
+<img align="centre" src="Spec.md/Disp10.png" alt="Firebase console once registered" />
+<p>
 
 
 
@@ -852,8 +885,9 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-######### LOGIN Screen Display! ##############
-
+<p align="center">
+<img align="centre" width="250" src="Spec.md/Disp11.png" alt="Login Screen" />
+<p>
 
 
 
@@ -1056,7 +1090,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
 ```
 
 
-######### Forgot Password Screen Display! ##############
+<p align="center">
+<img align="centre" width="250" src="Spec.md/Disp12.png" alt="Reset Password Screen" />
+<p>
 
 
 
@@ -1064,7 +1100,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
 
 
-######### EMAIL used to reset Password Display! ##############
+<p align="center">
+<img align="centre" src="Spec.md/Disp13.png" alt="Email used to reset password" />
+<p>
 
 
 
@@ -1077,7 +1115,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
 
 
-######### IMAGE of Layout Created with Root Element ##############
+<p align="center">
+<img align="centre" src="Spec.md/Disp14.png" alt="Creating app_bar.xml" />
+<p>
 
 
 
@@ -1236,8 +1276,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-######### ICON THAT ONCE CLICKED DIRECTS YOU TO ANOTHER ACTIVITY! ##############
-
+<p align="center">
+<img align="left" width="250" src="Spec.md/Disp15.png" alt="Popup Menu" />
+<img align="center" width="250" src="Spec.md/Disp16.png" alt="Popup Menu Pressed" />
+<img align="right" width="250" src="Spec.md/Disp15.png" alt="Popup Menu" />
+<p>
 
 
 
@@ -1650,7 +1693,10 @@ public class AccountActivity extends AppCompatActivity {
 
 
 
-########## PICTURE OF ACCOUNTS ACTIVITY LAYOUT. sign out etc! ##############
+
+<p align="center">
+<img align="centre" width="250" src="Spec.md/Disp17.png" alt="Accounts Screen. sign out etc!" />
+<p>
 
 
 
@@ -1742,9 +1788,3 @@ Developed by
 - Email Address: collo.kariss@gmail.com
 
 - github-username: [zecollokaris](https://github.com/zecollokaris)
-
-
-
-
-add repo link for follow
-github link and blog link
