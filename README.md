@@ -1286,7 +1286,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
 ## ACCOUNT SETTING - PUT ALL TOGETHER
 
 
