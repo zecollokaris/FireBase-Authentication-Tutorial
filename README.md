@@ -1,6 +1,34 @@
 # <p align="center">FIREBASE AUTHENTICATION<p>
 
 
+<p align="center">
+<img align="left" width="250" src="Spec.md/Disp4.png" alt="Login page" />
+<img align="centre" width="250" src="Spec.md/Disp5.png" alt="Register Page" />
+<img align="right" width="250" src="Spec.md/Disp13.png" alt="Authenticating login" />
+<p>
+
+Firebase comes with bunch features essential for every android app starting from **authentication** to hosting the app.
+
+
+-Below are the **advantages** using Firebase in general:
+
+
+> Super easy and quick to implement.
+
+> No server side configuration needed. No PHP Scripts and No Database Designs.
+
+> Realtime update without using GCM.
+
+> Autoscaling built-in
+
+> Can start for free (only need to start paying once we hit 50 connections)
+
+> Robust APIs for Javascript (including several frameworks like Angular), iOS, and Android
+
+> Built-in support for authentication services like Facebook, Google, and Twitter
+
+> Declarative Security Rules model allows us to enforce read/write privileges and data validation throughout the tree
+
 
 
 ## ENABLING FIREBASE AUTH
@@ -222,6 +250,21 @@ apply plugin: 'com.google.gms.google-services'
 
 </resources>
 
+```
+
+7. Create a new layout file in the **drawable folder** `app/src/main/res/drawable/` named **roundbutton.xml** 
+
+#### `roundbutton.xml`
+
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorRed"/>
+    <corners android:radius="150dp"/>
+
+</shape>
 ```
 
 #### **Now we have the project ready with all the dependencies added. Let’s start by adding the sign up screen.**
@@ -986,7 +1029,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 ## ADD TOOLBAR WITH ACCOUNT SETTINGS
 
 
-1. Create a new layout file named **app_bar** and change it root element to **android.support.v7.widget.Toolbar**
+1. Create a new layout file named **app_bar** in `app/src/main/res/layout/` and change it root element to **android.support.v7.widget.Toolbar**
 
 
 
