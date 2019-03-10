@@ -21,7 +21,7 @@
             android:layout_height="@dimen/logo_w_h"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:src="@drawable/knight"/>
+            android:src="@mipmap/ic_launcher"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -35,9 +35,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:hint="@string/hint_email"
-                android:drawableLeft="@drawable/email"
-                android:drawablePadding="10dp"
-                app:fontFamily="@font/poiretoneregular"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/colorTransparentPink"
                 android:theme="@style/CustomInputStyle"/>
@@ -54,11 +51,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:drawableLeft="@drawable/key"
                 android:drawablePadding="12dp"
                 android:ems="20"
                 android:hint="@string/hint_password"
-                app:fontFamily="@font/poiretoneregular"
                 android:inputType="textPassword"
                 android:textColor="@color/colorTransparentPink"
                 android:theme="@style/CustomInputStyle"/>
@@ -71,7 +66,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            app:fontFamily="@font/josefinslabbold"
             android:background="@drawable/roundbutton"
             android:text="@string/btn_login"
             android:textColor="@color/colorTransparentWhite" />
@@ -84,7 +78,6 @@
             android:background="@null"
             android:text="@string/btn_forgot_password"
             android:textAllCaps="false"
-            app:fontFamily="@font/josefinslabitalic"
             android:textColor="@color/colorPink" />
 
         <!-- Link to Login Screen -->
@@ -98,7 +91,6 @@
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
             android:textColor="@color/colorPink"
-            app:fontFamily="@font/josefinslabbold"
             android:textSize="15dp"/>
     </LinearLayout>
 
