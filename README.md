@@ -7,6 +7,15 @@
 <img align="right" width="250" src="Spec.md/Disp13.png" alt="Authenticating login" />
 <p>
 
+
+## FEATURES OF FIREBASE.
+
+
+<p align="center">
+<img align="centre" src="Spec.md/Disp1.png" alt="Kenyanese" />
+<p>
+
+
 Firebase comes with bunch features essential for every android app starting from **authentication** to hosting the app.
 
 
