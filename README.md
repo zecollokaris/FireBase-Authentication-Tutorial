@@ -1278,7 +1278,7 @@ public class MainActivity extends AppCompatActivity {
 
 <p align="center">
 <img align="left" width="250" src="Spec.md/Disp15.png" alt="Popup Menu" />
-<img align="center" width="250" src="Spec.md/Disp16.png" alt="Popup Menu Pressed" />
+<img align="center" width="250" src="Spec.md/Disp15.png" alt="Popup Menu Pressed" />
 <img align="left" width="250" src="Spec.md/Disp15.png" alt="Popup Menu" />
 <p>
 
