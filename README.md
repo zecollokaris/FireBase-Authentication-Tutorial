@@ -1745,13 +1745,6 @@ Developed by
 
 
 
-Check  on color xml
-stringxml
-dimex xml
-app theme color
-layout 
-activities
-manifesst.
+
 add repo link for follow
-add link to images for download.
 github link and blog link
