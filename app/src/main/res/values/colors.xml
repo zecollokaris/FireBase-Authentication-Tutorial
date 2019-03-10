@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#0097a7</color>
     <color name="colorAccent">#f2fe71</color>
 
+    <color name="colorRed">#EB3349</color>
+
     <color name="bg_login">#26ae90</color>
     <color name="bg_register">#2e3237</color>
     <color name="bg_main">#428bca</color>
