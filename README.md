@@ -1788,4 +1788,3 @@ Developed by
 - Email Address: collo.kariss@gmail.com
 
 - github-username: [zecollokaris](https://github.com/zecollokaris)
-
