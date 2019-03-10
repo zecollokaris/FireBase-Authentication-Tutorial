@@ -1,10 +1,10 @@
-# <p align="center">FIREBASE AUTHENTICATION<p>
+# <p align="center"> :fire: :closed_lock_with_key: FIREBASE AUTHENTICATION<p>
 
 
 <p align="center">
-<img align="left" width="250" src="Spec.md/Disp4.png" alt="Login page" />
-<img align="centre" width="250" src="Spec.md/Disp5.png" alt="Register Page" />
-<img align="right" width="250" src="Spec.md/Disp13.png" alt="Authenticating login" />
+<img align="left" width="250" src="https://user-images.githubusercontent.com/36197725/54093048-60d85a80-43a4-11e9-9fcc-4e526294a97a.gif" alt="Registration page" />
+<img align="centre" width="250" src="https://user-images.githubusercontent.com/36197725/54093051-6e8de000-43a4-11e9-8ea1-d79298cdf9e5.gif" alt="Login Page" />
+<img align="right" width="250" src="Spec.md/Disp13.png" alt="Forgot Password login" />
 <p>
 
 
@@ -119,7 +119,7 @@ Below are the **advantages** using Firebase in general:
 ## CREATING ANDROID PROJECT
 
 
-### **As we work here you can compare some section of your code with my [Repository](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo) incase you get stuck!** [https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo)
+#### **As we work here you can compare some section of your code with my [Repository](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo) incase you get stuck!** [https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo)
 
 
 
