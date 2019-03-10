@@ -17,4 +17,10 @@
         <item name="android:dropDownVerticalOffset">-4dp</item>
     </style>
 
+    <!--Input Theme-->
+    <style name="CustomInputStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/colorStandardBlack</item>
+        <item name="android:theme">@color/colorDarkBlue</item>
+    </style>
+
 </resources>
