@@ -4,7 +4,7 @@
 <p align="center">
 <img align="left" width="250" src="https://user-images.githubusercontent.com/36197725/54093048-60d85a80-43a4-11e9-9fcc-4e526294a97a.gif" alt="Registration page" />
 <img align="centre" width="250" src="https://user-images.githubusercontent.com/36197725/54093051-6e8de000-43a4-11e9-8ea1-d79298cdf9e5.gif" alt="Login Page" />
-<img align="right" width="250" src="Spec.md/Disp13.png" alt="Forgot Password login" />
+<img align="right" width="250" src="https://user-images.githubusercontent.com/36197725/54093148-7a2dd680-43a5-11e9-8a2a-12d4c1b0a15a.gif" alt="Forgot Password login" />
 <p>
 
 
