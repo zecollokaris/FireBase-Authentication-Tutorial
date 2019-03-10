@@ -119,7 +119,7 @@ Below are the **advantages** using Firebase in general:
 ## CREATING ANDROID PROJECT
 
 
-**As we work here you can compare some section of your code with my repository incase you get stuck!**
+**As we work here you can compare some section of your code with my [Repository](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo) incase you get stuck!** [https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo)
 
 
 
@@ -1789,9 +1789,3 @@ Developed by
 
 - github-username: [zecollokaris](https://github.com/zecollokaris)
 
-
-
-
-add repo link for follow
-
-github link and blog link
