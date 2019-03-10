@@ -10,24 +10,24 @@
 Firebase comes with bunch features essential for every android app starting from **authentication** to hosting the app.
 
 
--Below are the **advantages** using Firebase in general:
+Below are the **advantages** using Firebase in general:
 
 
-> Super easy and quick to implement.
+- Super easy and quick to implement.
 
-> No server side configuration needed. No PHP Scripts and No Database Designs.
+- No server side configuration needed. No PHP Scripts and No Database Designs.
 
-> Realtime update without using GCM.
+- Realtime update without using GCM.
 
-> Autoscaling built-in
+- Autoscaling built-in
 
-> Can start for free (only need to start paying once we hit 50 connections)
+- Can start for free (only need to start paying once we hit 50 connections)
 
-> Robust APIs for Javascript (including several frameworks like Angular), iOS, and Android
+- Robust APIs for Javascript (including several frameworks like Angular), iOS, and Android
 
-> Built-in support for authentication services like Facebook, Google, and Twitter
+- Built-in support for authentication services like Facebook, Google, and Twitter
 
-> Declarative Security Rules model allows us to enforce read/write privileges and data validation throughout the tree
+- Declarative Security Rules model allows us to enforce read/write privileges and data validation throughout the tree
 
 
 
