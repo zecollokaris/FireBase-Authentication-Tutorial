@@ -42,7 +42,7 @@ Below are the **advantages** using Firebase in general:
 
 ## ENABLING FIREBASE AUTH
 
-
+#### To checkout this on a blog use this [Link](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo) for a much clearer view. :point_right: [Click here :smile:](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo)
 
 1. First thing you need to do is go to `https://firebase.google.com/` and make an account to gain access to their console. After you gain access to the console you can start by creating your first project.
 
