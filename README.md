@@ -121,7 +121,7 @@ Below are the **advantages** using Firebase in general:
 
 #### **As we work here you can compare some section of your code with my [Repository](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo) incase you get stuck!** 
 
-:point_right: [https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo)
+#### :point_right: [https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo](https://github.com/zecollokaris/FireBase-Authentication-Tutorial/tree/USE-This-Demo)
 
 
 
